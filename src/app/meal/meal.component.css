@@ -1,0 +1,36 @@
+button{
+  margin-left: 10px;
+  height: 30px;
+  text-align: center;
+  padding: 0%;
+  width: auto;
+}
+/* table, th, td {
+  border: 0.5px solid;
+} */
+table{
+  width: 80%;
+  border-collapse: collapse;
+}
+th{
+  text-align: center;
+}
+.all {
+  background-color: darkturquoise;
+}
+
+.high {
+  background-color: chartreuse;
+  margin-left: 5px;
+}
+
+.low {
+  background-color: darkorange;
+  margin-left: 5px;
+}
+/* button */
+.meal{
+  margin-top: 1%;
+  height: 30px;
+  width: 100px;
+}

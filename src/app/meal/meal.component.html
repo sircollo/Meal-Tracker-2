@@ -1,0 +1,46 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-8">
+      <h2>Your Food Details</h2>
+        <!-- list Table-->
+        <table >
+          <tr>
+            <th>Meal </th>
+            <th>Calories</th>
+            <th>Details</th>            
+          </tr>
+          <tr *ngFor="let meal of meals"> 
+            <td><div><span>{{meal.name}} </span></div> 	</td>
+            <td><div><span> {{meal.calories}} </span> </div></td> 
+            <td><div><span> {{meal.details}} </span></div> </td>  
+            <td><div><button class=" btn btn-success" (click)="editMeal" >Edit</button>
+                <button class="btn btn-danger" (click)="deleteMeal(meals)">Delete</button></div>
+          </td>
+          </tr>    
+          <tr>    
+          </tr>    
+        </table>
+        <!-- end of list table -->
+    </div>
+    <div class="col-md-4">
+      <h3>Food Form</h3>
+      <!-- meal-form -->
+      <app-meal-form (addMeal)="addNewMeal($event)"></app-meal-form>
+    </div>
+  </div>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col-md-3 bg-dark text-light" >
+  <!-- meal edit form -->
+  <app-meal-edit-form [mealToEdit]="meals"(updated)="resetSelection()"></app-meal-edit-form>
+  </div>
+    <div class="col-md-5">
+    <div>
+      <!-- <button class="all" (click)="viewAllFoods()">ALL FOODS</button> -->
+      <button class="high" (click)="viewHighFoods()">HIGH CALORIE FOODS</button>
+      <button class="low" (click)="viewLowFoods()">LOW CALORIE FOODS</button>
+  </div>
+  </div>
+</div>
+</div>

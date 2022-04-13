@@ -1,0 +1,19 @@
+<form  #mealForm="ngForm" (ngSubmit)="submitMeal()">  <!--(ngSubmit)="submitMeal()"-->
+  <div class="form-group">
+      <label for="mealname">Name of food</label>
+      <input type="text" name="name"  [(ngModel)]="newMeal.name" class="form-control" id="mealName" aria-describedby="emailHelp" placeholder="">
+      <!-- [(ngModel)]="newMeal.name" -->
+  </div>
+  <div class="form-group">
+      <label for="calories">Calories</label>
+      <input type="number" name="calories"  [(ngModel)]="newMeal.calories" class="form-control" id="calories" aria-describedby="emailHelp" placeholder="">
+      <!-- [(ngModel)]="newMeal.calories" -->
+  </div>
+  <div class="form-group">
+      <label for="details">Food details</label>
+      <textarea type="textarea" name="details"  [(ngModel)]="newMeal.details" class="form-control" id="details" placeholder=""></textarea>
+      <!-- [(ngModel)]="newMeal.details" -->
+    </div>
+
+  <button type="submit" class="btn btn-dark">Add Meal</button>
+</form>
